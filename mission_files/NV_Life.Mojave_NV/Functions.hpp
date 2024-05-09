@@ -29,6 +29,7 @@ class Life_Client_Core {
         class initCiv {};
         class initCop {};
         class initMedic {};
+        class initAdac {};
         class setupActions {};
         class setupEVH {};
         class survival {};
@@ -103,6 +104,11 @@ class Life_Client_Core {
         class robPerson {};
         class robReceive {};
         class tazed {};
+    };
+
+    class ADAC {
+        file = "core\adac";
+        class adacMarkers {};
     };
 
     class Config {
@@ -213,7 +219,6 @@ class Life_Client_Core {
         class saveGear {};
         class simDisable {};
         class startLoadout {};
-        class stripDownPlayer {};
         class teleport {};
         class whereAmI {};
         class moveIn {};

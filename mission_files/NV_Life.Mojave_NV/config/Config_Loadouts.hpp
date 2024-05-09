@@ -5,7 +5,7 @@
         //     if you put more than a uniform on the CIV's class, they will be selected randonly,
         //         otherwise, for the other teams, player will get the uniform related to his level
 
-        itemType[] = { // itemType can be: uniform, vest, backpack, weapon, items or linkedItems
+        itemType[] = { // itemType can be: uniform, headgear, vest, backpack, weapon, items or linkedItems
             { "classname", "conditions" }
         };
     };
@@ -14,19 +14,22 @@ class Loadouts {
     // COP
     class WEST {
         uniform[] = {
-            {"U_Rangemaster", "call life_copLevel >= 0"}
+            {"armor_ncr_trooper_01_uniform", "call life_copLevel >= 0"}
         };
-        vest[] = {
-            {"V_Rangemaster_belt", "call life_copLevel >= 0"}
+        headgear[] = {
+            {"armor_ncr_trooper_helm", "call life_copLevel >= 0"}
         };
+        vest[] = {};
         backpack[] = {};
         weapon[] = {
-            {"hgun_P07_snds_F", "call life_copLevel >= 0"}
+            {"AM_serviceRifle", "call life_copLevel >= 0"}
         };
         mags[] = {
-            {"16Rnd_9x21_Mag", 6, "call life_copLevel >= 0"}
+            {"20Rnd_556x45_Mag", 7, "call life_copLevel >= 0"}
         };
-        items[] = {};
+        items[] = {
+            {"AM_stimpak", 1, "call life_copLevel >= 0"}
+        };
         linkedItems[] = {
             {"ItemMap", "call life_copLevel >= 0"},
             {"ItemCompass", "call life_copLevel >= 0"},
@@ -37,19 +40,24 @@ class Loadouts {
     // CIV
     class CIV {
         uniform[] = {
-            {"U_C_Poloshirt_blue", "!life_is_arrested"},
-            {"U_C_Poloshirt_burgundy", "!life_is_arrested"},
-            {"U_C_Poloshirt_stripped", "!life_is_arrested"},
-            {"U_C_Poloshirt_tricolour", "!life_is_arrested"},
-            {"U_C_Poloshirt_salmon", "!life_is_arrested"},
-            {"U_C_Poloshirt_redwhite", "!life_is_arrested"},
-            {"U_C_Commoner1_1", "!life_is_arrested"}
+            {"wastelandsettler02_uniform", "!life_is_arrested"},
+            {"wastelandsettler03_uniform", "!life_is_arrested"},
+            {"wasteland_doctor_02_uniform", "!life_is_arrested"},
+            {"wastelandmerchant01_uniform", "!life_is_arrested"},
+            {"lucassimms_ncr_uniform", "!life_is_arrested"},
+            {"republican_01_uniform", "!life_is_arrested"},
+            {"AM_Uniform_CowboyOutfit_S", "!life_is_arrested"},
+            {"republican_02_uniform", "!life_is_arrested" },
+            {"wasteland_doctor_01_uniform", "!life_is_arrested" }
         };
+        headgear[] = {};
         vest[] = {};
         backpack[] = {};
         weapon[] = {};
         mags[] = {};
-        items[] = {};
+        items[] = {
+            {"heroin_processed", 1, "!life_is_arrested"}
+        };
         linkedItems[] = {
             {"ItemMap", ""},
             {"ItemCompass", ""},
@@ -60,19 +68,43 @@ class Loadouts {
     // MED
     class GUER {
         uniform[] = {
-            {"U_Rangemaster", "call life_medicLevel >= 1"}
+            {"armor_NCR_doctor_3_uniform", "call life_medicLevel >= 1"},
+            {"NCR_doctor_uniform", "call life_medicLevel >= 1"}
+        };
+        headgear[] = {};
+        vest[] = {};
+        backpack[] = {};
+        weapon[] = {};
+        mags[] = {};
+        items[] = {
+            {"AM_stimpak", 3, "call life_medicLevel >= 1"}
+        };
+        linkedItems[] = {
+            {"ItemMap", "call life_medicLevel >= 1"},
+            {"ItemCompass", "call life_medicLevel >= 1"},
+            {"ItemWatch", "call life_medicLevel >= 1"}
+        };
+    };
+
+    //ADAC
+    class EAST {
+        uniform[] = {
+            {"legionveteran_uniform", "call life_adacLevel >= 1"}
+        };
+        headgear[] = {
+            {"legionwollfhead_noAcc", "call life_adacLevel >= 1"}
         };
         vest[] = {};
         backpack[] = {};
         weapon[] = {};
         mags[] = {};
         items[] = {
-            {"FirstAidKit", 2, "call life_medicLevel >= 1"}
+            {"AM_stimpak", 1, "call life_adacLevel >= 1"}
         };
         linkedItems[] = {
-            {"ItemMap", "call life_medicLevel >= 1"},
-            {"ItemCompass", "call life_medicLevel >= 1"},
-            {"ItemWatch", "call life_medicLevel >= 1"}
+            {"ItemMap", "call life_adacLevel >= 1"},
+            {"ItemCompass", "call life_adacLevel >= 1"},
+            {"ItemWatch", "call life_adacLevel >= 1"}
         };
     };
 };

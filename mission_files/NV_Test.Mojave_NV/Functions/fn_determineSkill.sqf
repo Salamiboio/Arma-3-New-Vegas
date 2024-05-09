@@ -1,0 +1,21 @@
+params ["_IDC", "_START", "_DIVIDE", "_ST", "_PE", "_EN", "_CH", "_IN", "_AG", "_LK"];
+_STRENGTH = str((parseText(ctrlText 1000))) splitString " ";
+_STNUM =  parseNumber(format["%1%2",(_STRENGTH select 0), (_STRENGTH select 1)]);
+_PERCEPTION = str((parseText(ctrlText 1001))) splitString " ";
+_PENUM =  parseNumber(format["%1%2",(_PERCEPTION select 0), (_PERCEPTION select 1)]);
+_ENDURANCE = str((parseText(ctrlText 1002))) splitString " ";
+_ENNUM =  parseNumber(format["%1%2",(_ENDURANCE select 0), (_ENDURANCE select 1)]);
+_CHARISMA = str((parseText(ctrlText 1003))) splitString " ";
+_CHNUM =  parseNumber(format["%1%2",(_CHARISMA select 0), (_CHARISMA select 1)]);
+_INTELLIGENCE = str((parseText(ctrlText 1004))) splitString " ";
+_INNUM =  parseNumber(format["%1%2",(_INTELLIGENCE select 0), (_INTELLIGENCE select 1)]);
+_AGILITY = str((parseText(ctrlText 1005))) splitString " ";
+_AGNUM =  parseNumber(format["%1%2",(_AGILITY select 0), (_AGILITY select 1)]);
+_LUCK = str((parseText(ctrlText 1006))) splitString " ";
+_LKNUM =  parseNumber(format["%1%2",(_LUCK select 0), (_LUCK select 1)]);
+
+_SKILL = parseNumber(str(parseText(ctrlText _IDC)));
+_SIGN = "%";
+_SKILL = round (_START + (((_ST * _STNUM) + (_PE * _PENUM) + (_EN * _ENNUM) + (_CH * _CHNUM) + (_IN * _INNUM) + (_AG * _AGNUM) + (_LK * _LKNUM)) / _DIVIDE));
+_SKILLPUSH = format["<t size='0.8' color='#38d408' align='left' 'shadow='0'>%1%2</t>", _SKILL, _SIGN];
+(displayCtrl _IDC) ctrlSetStructuredText parseText _SKILLPUSH;

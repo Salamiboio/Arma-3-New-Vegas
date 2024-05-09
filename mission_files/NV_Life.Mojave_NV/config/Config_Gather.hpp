@@ -34,6 +34,12 @@ class CfgGather {
             item = "";
             zoneSize = 30;
         };
+        class brahminshit {
+            amount = 3;
+            zones[] = { "pile_1", "pile_2" };
+            item = "";
+            zoneSize = 6;
+        };
     };
 
 /*

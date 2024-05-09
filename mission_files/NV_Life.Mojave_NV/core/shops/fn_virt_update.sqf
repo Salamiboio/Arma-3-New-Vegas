@@ -25,7 +25,7 @@ _shopItems = M_CONFIG(getArray,"VirtualShops",life_shop_type,"items");
     _displayName = M_CONFIG(getText,"VirtualItems",_x,"displayName");
     _price = M_CONFIG(getNumber,"VirtualItems",_x,"buyPrice");
     if (!(_price isEqualTo -1)) then {
-        _item_list lbAdd format ["%1  ($%2)",(localize _displayName),[_price] call life_fnc_numberText];
+        _item_list lbAdd format ["%1  (%2 caps)",(localize _displayName),[_price] call life_fnc_numberText];
         _item_list lbSetData [(lbSize _item_list)-1,_x];
         _item_list lbSetValue [(lbSize _item_list)-1,_price];
         _icon = M_CONFIG(getText,"VirtualItems",_x,"icon");
@@ -37,11 +37,13 @@ _shopItems = M_CONFIG(getArray,"VirtualShops",life_shop_type,"items");
 
 {
     _name = M_CONFIG(getText,"VirtualItems",_x,"displayName");
+    _sellprice = M_CONFIG(getNumber,"VirtualItems",_x,"sellPrice");
     _val = ITEM_VALUE(_x);
 
     if (_val > 0) then {
-        _gear_list lbAdd format ["%2 [x%1]",_val,(localize _name)];
+        _gear_list lbAdd format ["%2 [x%1] (%3 caps)",_val,(localize _name),[_sellprice] call life_fnc_numberText];
         _gear_list lbSetData [(lbSize _gear_list)-1,_x];
+        _gear_list lbSetValue [(lbSize _gear_list)-1,_sellprice];
         _icon = M_CONFIG(getText,"VirtualItems",_x,"icon");
         if (!(_icon isEqualTo "")) then {
             _gear_list lbSetPicture [(lbSize _gear_list)-1,_icon];

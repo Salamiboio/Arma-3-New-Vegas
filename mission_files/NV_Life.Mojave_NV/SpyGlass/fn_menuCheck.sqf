@@ -2,7 +2,6 @@
 /*
     File: fn_menuCheck.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Checks for known cheat menus and closes them then reports them to the server.
 */
@@ -128,11 +127,19 @@ for "_i" from 0 to 1 step 0 do {
         sleep 0.5;
         failMission "SpyGlass";
     };
+    
+    if (LIFE_SETTINGS(getNumber,"disableCommanderView") isEqualTo 1) then {
+        if (cameraView isEqualTo "GROUP") then {
+            [profileName,getPlayerUID player,"Entered_commander_view"] remoteExec ["SPY_fnc_cookieJar",RSERV];
+            [profileName,"Entered commander view"] remoteExec ["SPY_fnc_notifyAdmins",RCLIENT];
+            sleep 0.5;
+            failMission "SpyGlass";
+        };
+    };
 
     /*
         Display Validator
         Loops through and makes sure none of the displays were modified..
-
         Checks every 5 minutes.
     */
     if ((time - _timeStamp) > 300) then {

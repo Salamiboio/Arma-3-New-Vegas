@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\config",
+    "\\core",
+    "\\core\\adac",
+    "\\core\\session",
+    "\\dialog",
+    "\\dialog\\function"
+  ],
+  "SelectedNode": "\\config\\Config_SpawnPoints.hpp",
+  "PreviewInSolutionExplorer": false
+}

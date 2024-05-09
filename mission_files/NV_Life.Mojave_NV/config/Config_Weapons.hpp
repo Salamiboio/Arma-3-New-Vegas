@@ -201,4 +201,19 @@ class WeaponShops {
         mags[] = {};
         accs[] = {};
     };
+
+    //Adac Shops
+    class adac_basic {
+        name = "store";
+        side = "adac";
+        conditions = "";
+        items[] = {
+            { "ItemGPS", "", 100, 50, "" },
+            { "Binocular", "", 150, 75, "" },
+            { "FirstAidKit", "", 150, 75, "" },
+            { "NVGoggles", "", 1200, 600, "" }
+        };
+        mags[] = {};
+        accs[] = {};
+    };
 };

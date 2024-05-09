@@ -25,7 +25,7 @@ life_dp_start = _target;
 life_delivery_in_progress = true;
 
 life_dp_point = call compile format ["%1",_dp];
-_dp = toUpper((_dp splitString "_") joinString " ");
+_dp = (_dp splitString "_") joinString " ";
 
 life_cur_task = player createSimpleTask [format ["Delivery_%1",life_dp_point]];
 life_cur_task setSimpleTaskDescription [format [localize "STR_NOTF_DPStart",_dp],"Delivery Job",""];

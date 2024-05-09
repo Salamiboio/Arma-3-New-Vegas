@@ -15,3 +15,7 @@ if (LIFE_SETTINGS(getNumber,"spyGlass_toggle") isEqualTo 1) then {[] execVM "Spy
 
 [] execVM "core\init.sqf";
 [] execVM "briefing.sqf";
+waitUntil {!isNull player};
+params ["_unit"];
+
+_unit addEventHandler ["Fired", { params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"]; if ((_unit inArea nv_1 || _unit inArea nv_2 || _unit inArea nv_3 || _unit inArea nv_4 || _unit inArea nv_5) && side _unit != west) then {_unit addRating -9999};}];

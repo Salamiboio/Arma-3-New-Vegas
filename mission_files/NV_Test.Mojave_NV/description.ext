@@ -1,0 +1,22 @@
+#include "dialog\MasterHandler.hpp"
+
+class cfgFunctions 
+{
+	#include "functions\SAL_functions.hpp"
+};         
+class RscTitles {
+    #include "dialog\progress.hpp"
+    #include "dialog\hud_nameTags.hpp"
+    #include "dialog\hud_stats.hpp"
+    #include "dialog\dialogCharacter.hpp"
+};
+class CfgSounds {
+    sounds[] = {};
+    class pipboyClick {
+        name = "pipboyClick";
+        sound[] = {"\sounds\pipboyClick.ogg", 1.0, 1};
+        titles[] = {};
+    };
+};
+
+enableDebugConsole = 2;                                                                                                                                                                                                                                                                                                                                                                                                                                                      

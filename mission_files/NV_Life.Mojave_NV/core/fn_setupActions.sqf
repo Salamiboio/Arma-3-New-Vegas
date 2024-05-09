@@ -27,4 +27,7 @@ switch (playerSide) do {
     //EMS
     case independent: { };
 
+    //ADAC
+    case east: { };
+
 };

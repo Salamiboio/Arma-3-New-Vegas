@@ -409,4 +409,45 @@ class Clothing {
             { "NONE", $STR_C_Remove_backpacks, 0, "" }
         };
     };
+
+    class adac {
+        title = "STR_Shops_C_Adac";
+        conditions = "";
+        side = "adac";
+        uniforms[] = {
+            { "NONE", $STR_C_Remove_uniforms, 0, "" },
+            { "U_C_WorkerCoveralls", "", 350, "" }
+        };
+        headgear[] = {
+            { "NONE", $STR_C_Remove_headgear, 0, "" }
+        };
+        goggles[] = {
+            { "NONE", $STR_C_Remove_goggles, 0, "" },
+            { "G_Squares", "", 10, "" },
+            { "G_Shades_Blue", "", 20, "" },
+            { "G_Sport_Blackred", "", 20, "" },
+            { "G_Sport_Checkered", "", 20, "" },
+            { "G_Sport_Blackyellow", "", 20, "" },
+            { "G_Sport_BlackWhite", "", 20, "" },
+            { "G_Shades_Black", "", 25, "" },
+            { "G_Lowprofile", "", 30, "" },
+            { "G_Combat", "", 55, "" },
+            { "G_Aviator", "", 100, "" },
+            { "G_Lady_Mirror", "", 150, "" },
+            { "G_Lady_Dark", "", 150, "" },
+            { "G_Lady_Blue", "", 150, "" }
+        };
+        vests[] = {
+            { "NONE", $STR_C_Remove_vests, 0, "" },
+            { "V_Rangemaster_belt", "", 800, "" }
+        };
+        backpacks[] = {
+            { "NONE", $STR_C_Remove_backpacks, 0, "" },
+            { "B_FieldPack_cbr", "", 500, "" },
+            { "B_AssaultPack_cbr", "", 700, "" },
+            { "B_Kitbag_cbr", "", 800, "" },
+            { "B_Bergen_sgg", "", 2500, "" },
+            { "B_Carryall_cbr", "", 3500, "" }
+        };
+    };
 };

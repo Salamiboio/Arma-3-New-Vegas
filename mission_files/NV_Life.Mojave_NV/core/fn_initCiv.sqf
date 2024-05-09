@@ -10,10 +10,15 @@ private _altisArray = [];
 private _tanoaArray = ["Land_House_Small_01_F"];
 private _nvArray = ["Land_Warehouse_03_F"];
 private _spawnBuildings = [[["Mojave_NV", _nvArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
-
 civ_spawn_1 = nearestObjects[getMarkerPos  "civ_spawn_1", _spawnBuildings,350];
 civ_spawn_2 = nearestObjects[getMarkerPos  "civ_spawn_2", _spawnBuildings,350];
 waitUntil {!(isNull (findDisplay 46))};
+while {life_bs == 0} do 
+{
+    [] call sal_fnc_openDialogCreation;
+    waitUntil {IsNull (FindDisplay 4099)};
+};
+waitUntil {life_bs > 0};
 if (life_is_alive && !life_is_arrested) then {
     /* Spawn at our last position */
     player setVehiclePosition [life_civ_position, [], 0, "CAN_COLLIDE"];

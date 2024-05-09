@@ -10,6 +10,46 @@ diag_log "--------------------------------- Starting Altis Life Client Init ----
 diag_log format["------------------------------------------ Version %1 -------------------------------------------",(LIFE_SETTINGS(getText,"framework_version"))];
 diag_log "----------------------------------------------------------------------------------------------------";
 
+[sr_door, sr_enterance, "Silver Rush"] spawn sal_fnc_loading_screen;
+[sr_door_exit, sr_exit, "Freeside"] spawn sal_fnc_loading_screen;
+
+[mar_door, mar_enterance, "Mick and Ralph's"] spawn sal_fnc_loading_screen;
+[mar_door_exit, mar_exit, "Freeside"] spawn sal_fnc_loading_screen;
+
+lvb_door setObjectTextureGlobal [0, ""];
+[lvb_door, lvb_enterance, "Las Vegas Boulevard Station"] spawn sal_fnc_loading_screen;
+[lvb_door_exit, lvb_exit, "New Vegas"] spawn sal_fnc_loading_screen;
+
+jail_door setObjectTextureGlobal [0, ""];
+[jail_door, jail_enterance, "NCR Jail"] spawn sal_fnc_loading_screen;
+[jail_door_exit, jail_exit, "Freeside"] spawn sal_fnc_loading_screen;
+
+[pwn1_door, pwn1_enterance, "Pawn Shop"] spawn sal_fnc_loading_screen;
+[pwn1_door_exit, pwn1_exit, "Freeside"] spawn sal_fnc_loading_screen;
+
+[me_door, me_enterance, "Mojave Express"] spawn sal_fnc_loading_screen;
+[me_door_exit, me_exit, "Freeside"] spawn sal_fnc_loading_screen;
+
+[king_door, king_enterance, "Mojave Express"] spawn sal_fnc_loading_screen;
+[king_door_door_exit, king_door_exit, "Freeside"] spawn sal_fnc_loading_screen;
+
+dp_missions addAction[localize"STR_MAR_Get_Delivery_Mission", life_fnc_getDPMission, "dp_1", 0, false ,false , "", ' isNil "life_dp_point" && !life_delivery_in_progress ', 5];
+
+Pawn_Shop addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+The_Silver_Rush addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+The_Atomic_Wrangler addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+The_Kings addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+The_Followers_of_the_Apocalypse addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+Mick_and_Ralphs addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+The_LVB_Station addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+The_NCR_Jail addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+Roys_Motel addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+The_Tops addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+The_Gomorrah addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+The_Lucky_38 addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+The_Ultra_Luxe addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+The_Vault_21_Hotel addAction[localize"STR_MAR_Deliver_Package", life_fnc_dpFinish, "dp_1", 0, false, false,"",'!isNil "life_dp_point" && life_delivery_in_progress && life_dp_point == _target ', 5];
+
 0 cutText[localize "STR_Init_ClientSetup","BLACK FADED",99999999];
 _timeStamp = diag_tickTime;
 
@@ -59,6 +99,10 @@ switch (playerSide) do {
         life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_med");
         [] call life_fnc_initMedic;
     };
+    case east: {
+        life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_adac");
+        [] call life_fnc_initAdac;
+    };
 };
 CONSTVAR(life_paycheck);
 
@@ -75,7 +119,6 @@ diag_log "[Life Client] Executing client.fsm";
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call life_fnc_keyHandler"];
 [player, life_settings_enableSidechannel, playerSide] remoteExecCall ["TON_fnc_manageSC", RSERV];
 
-[] call life_fnc_hudSetup;
 [] spawn life_fnc_survival;
 
 0 cutText ["","BLACK IN"];
@@ -120,6 +163,17 @@ if (life_HC_isActive) then {
     [getPlayerUID player, player getVariable ["realname", name player]] remoteExec ["life_fnc_wantedProfUpdate", RSERV];
 };
 
+[] call life_fnc_hudSetup;
+life_s = life_bs;
+life_p = life_bp;
+life_e = life_be;
+life_c = life_bc;
+life_i = life_bi;
+life_a = life_ba;
+life_l = life_bl;
+[] call life_fnc_hudUpdate;
+
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log format ["               End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime - _timeStamp)];
 diag_log "----------------------------------------------------------------------------------------------------";
+[] spawn theprogrammer_core_fnc_clientInit;

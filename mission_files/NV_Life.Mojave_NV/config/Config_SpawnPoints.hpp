@@ -79,7 +79,15 @@ class CfgSpawnPoints {
                 conditions = "";
             };
         };
-    };
+            class adac {
+                class Kavala {
+                    displayName = "Adac HQ";
+                    spawnMarker = "adac_spawn_1";
+                    icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+                    conditions = "";
+                };
+            };
+        };
 
     class Tanoa {
 

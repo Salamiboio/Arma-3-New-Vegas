@@ -6,6 +6,8 @@ unsafeCVL = 1; // Allows createVehicleLocal to be executed in Multiplayer
 #include "CfgRemoteExec.hpp"
 #include "dialog\MasterHandler.hpp"
 #include "config\Config_Master.hpp"
+#include "The-Programmer\theprogrammer_dialog_master.cpp"
+#include "config\usabledrugs_config.hpp"
 
 class CfgServer {
     DatabaseName = "altislife"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
@@ -16,19 +18,78 @@ class CfgServer {
     Disabled: If HeadlessSupport is set to 0 (disabled), the connection of a Headless Client will make no difference. This option will increase server performance a TINY but negligible amount.
     */
 };
+enableDebugConsole = 2;     
 
 class RscTitles {
     #include "dialog\progress.hpp"
     #include "dialog\hud_nameTags.hpp"
     #include "dialog\hud_stats.hpp"
+    #include "dialog\dialogCharacter.hpp"
 };
 
 class CfgFunctions {
     #include "Functions.hpp"
+    #include "functions\SAL_functions.hpp"
 };
 
 class CfgSounds {
     sounds[] = {};
+    class stimpak {
+        name = "stimpak";
+        sound[] = {"\sounds\stimpak.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class pipboyClick {
+        name = "pipboyClick";
+        sound[] = {"\sounds\pipboyClick.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class radx {
+        name = "radx";
+        sound[] = {"\sounds\radx.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class radaway {
+        name = "radaway";
+        sound[] = {"\sounds\radaway.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class mentats {
+        name = "mentats";
+        sound[] = {"\sounds\mentats.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class psycho {
+        name = "psycho";
+        sound[] = {"\sounds\psycho.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class jet {
+        name = "jet";
+        sound[] = {"\sounds\jet.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class drink1 {
+        name = "drink1";
+        sound[] = {"\sounds\drink1.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class radiation1 {
+        name = "radiation1";
+        sound[] = {"\sounds\radiation1.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class chewy1 {
+        name = "chewy1";
+        sound[] = {"\sounds\chewy1.ogg", 1.0, 1};
+        titles[] = {};
+    };
+    class crunchy1 {
+        name = "crunchy1";
+        sound[] = {"\sounds\crunchy1.ogg", 1.0, 1};
+        titles[] = {};
+    };
+
     class sirenLong {
         name = "sirenLong";
         sound[] = {"\sounds\sirenLong.ogg", 1.0, 1};
@@ -79,6 +140,10 @@ class CfgSounds {
 };
 
 class CfgDebriefing {
+class kick {
+    title = "Global banned";
+    description = "You're not allowed to join this server cause you're banned by the-programmer.com";
+};
     class NotWhitelisted {
         title = "$STR_NotWhitelisted_Title";
         subtitle = "$STR_NotWhitelisted_SubTitle";

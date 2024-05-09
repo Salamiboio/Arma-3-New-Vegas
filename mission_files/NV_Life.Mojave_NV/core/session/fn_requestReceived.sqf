@@ -24,7 +24,7 @@ if ((_this select 0) isEqualTo "Error") exitWith {[] call SOCK_fnc_insertPlayerI
 if (!(getPlayerUID player isEqualTo (_this select 0))) exitWith {[] call SOCK_fnc_dataQuery;};
 
 //Lets make sure some vars are not set before hand.. If they are get rid of them, hopefully the engine purges past variables but meh who cares.
-if (!isServer && (!isNil "life_adminlevel" || !isNil "life_coplevel" || !isNil "life_donorlevel")) exitWith {
+if (!isServer && (!isNil "life_adminlevel" || !isNil "life_coplevel" || !isNil "life_donorlevel" || !isNil "life_adaclevel")) exitWith {
     [profileName,getPlayerUID player,"VariablesAlreadySet"] remoteExecCall ["SPY_fnc_cookieJar",RSERV];
     [profileName,format ["Variables set before client initialization...\nlife_adminlevel: %1\nlife_coplevel: %2\nlife_donorlevel: %3",life_adminlevel,life_coplevel,life_donorlevel]] remoteExecCall ["SPY_fnc_notifyAdmins",RCLIENT];
     sleep 0.9;
@@ -51,11 +51,28 @@ switch (playerSide) do {
     case west: {
         CONST(life_coplevel,(_this select 7));
         CONST(life_medicLevel,0);
+        CONST(life_adacLevel,0);
         life_blacklisted = _this select 9;
         if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
             life_hunger = ((_this select 10) select 0);
             life_thirst = ((_this select 10) select 1);
             player setDamage ((_this select 10) select 2);
+            life_rads = ((_this select 10) select 3);
+            life_s = ((_this select 10) select 4);
+            life_p = ((_this select 10) select 5);
+            life_e = ((_this select 10) select 6);
+            life_c = ((_this select 10) select 7);
+            life_i = ((_this select 10) select 8);
+            life_a = ((_this select 10) select 9);
+            life_l = ((_this select 10) select 10);
+            life_bs = ((_this select 10) select 11);
+            life_bp = ((_this select 10) select 12);
+            life_be = ((_this select 10) select 13);
+            life_bc = ((_this select 10) select 14);
+            life_bi = ((_this select 10) select 15);
+            life_ba = ((_this select 10) select 16);
+            life_bl = ((_this select 10) select 17);
+
         };
     };
 
@@ -63,11 +80,28 @@ switch (playerSide) do {
         life_is_arrested = _this select 7;
         CONST(life_coplevel, 0);
         CONST(life_medicLevel, 0);
+        CONST(life_adacLevel,0);
         life_houses = _this select (_count - 3);
         if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
             life_hunger = ((_this select 9) select 0);
             life_thirst = ((_this select 9) select 1);
             player setDamage ((_this select 9) select 2);
+            life_rads = ((_this select 9) select 3);
+            life_s = ((_this select 9) select 4);
+            life_p = ((_this select 9) select 5);
+            life_e = ((_this select 9) select 6);
+            life_c = ((_this select 9) select 7);
+            life_i = ((_this select 9) select 8);
+            life_a = ((_this select 9) select 9);
+            life_l = ((_this select 9) select 10);
+            life_bs = ((_this select 9) select 11);
+            life_bp = ((_this select 9) select 12);
+            life_be = ((_this select 9) select 13);
+            life_bc = ((_this select 9) select 14);
+            life_bi = ((_this select 9) select 15);
+            life_ba = ((_this select 9) select 16);
+            life_bl = ((_this select 9) select 17);
+
         };
 
         //Position
@@ -95,10 +129,53 @@ switch (playerSide) do {
     case independent: {
         CONST(life_medicLevel,(_this select 7));
         CONST(life_coplevel,0);
+        CONST(life_adacLevel,0);
         if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
             life_hunger = ((_this select 9) select 0);
             life_thirst = ((_this select 9) select 1);
             player setDamage ((_this select 9) select 2);
+            life_rads = ((_this select 9) select 3);
+            life_s = ((_this select 9) select 4);
+            life_p = ((_this select 9) select 5);
+            life_e = ((_this select 9) select 6);
+            life_c = ((_this select 9) select 7);
+            life_i = ((_this select 9) select 8);
+            life_a = ((_this select 9) select 9);
+            life_l = ((_this select 9) select 10);
+            life_bs = ((_this select 9) select 11);
+            life_bp = ((_this select 9) select 12);
+            life_be = ((_this select 9) select 13);
+            life_bc = ((_this select 9) select 14);
+            life_bi = ((_this select 9) select 15);
+            life_ba = ((_this select 9) select 16);
+            life_bl = ((_this select 9) select 17);
+
+        };
+    };
+
+    case east: {
+        CONST(life_adacLevel,(_this select 7));
+        CONST(life_coplevel,0);
+        CONST(life_medicLevel,0);
+        if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
+            life_hunger = ((_this select 9) select 0);
+            life_thirst = ((_this select 9) select 1);
+            player setDamage ((_this select 9) select 2);
+            life_rads = ((_this select 9) select 3);
+            life_s = ((_this select 9) select 4);
+            life_p = ((_this select 9) select 5);
+            life_e = ((_this select 9) select 6);
+            life_c = ((_this select 9) select 7);
+            life_i = ((_this select 9) select 8);
+            life_a = ((_this select 9) select 9);
+            life_l = ((_this select 9) select 10);
+            life_bs = ((_this select 9) select 11);
+            life_bp = ((_this select 9) select 12);
+            life_be = ((_this select 9) select 13);
+            life_bc = ((_this select 9) select 14);
+            life_bi = ((_this select 9) select 15);
+            life_ba = ((_this select 9) select 16);
+            life_bl = ((_this select 9) select 17);
         };
     };
 };

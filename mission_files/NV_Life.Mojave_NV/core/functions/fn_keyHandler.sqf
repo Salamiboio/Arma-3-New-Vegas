@@ -17,7 +17,7 @@ params [
 
 private _speed = speed cursorObject;
 private _handled = false;
-private _interactionKey = if (actionKeys "User10" isEqualTo []) then {219} else {(actionKeys "User10") select 0};
+private _interactionKey = if (actionKeys "User10" isEqualTo []) then {52} else {(actionKeys "User10") select 0};
 private _interruptionKeys = [17, 30, 31, 32]; //A,S,W,D
 
 //Vault handling...
@@ -96,6 +96,9 @@ switch (_code) do {
 
         if (_code in _CommandMode) then {
             hint localize "STR_NOTF_CommanderView";
+            _handled = true;
+        };
+        if (_code in (actionKeys "Diary")) then {
             _handled = true;
         };
     };

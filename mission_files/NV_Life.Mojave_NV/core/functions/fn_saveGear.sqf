@@ -18,12 +18,12 @@ _return pushBack backpack player;
 _return pushBack goggles player;
 _return pushBack headgear player;
 _return pushBack assignedITems player;
-if (playerSide isEqualTo west || playerSide isEqualTo civilian && {LIFE_SETTINGS(getNumber,"save_civilian_weapons") isEqualTo 1}) then {
+if (playerSide isEqualTo west || playerSide isEqualTo civilian || playerSide isEqualTo east && {LIFE_SETTINGS(getNumber,"save_civilian_weapons") isEqualTo 1}) then {
     _return pushBack primaryWeapon player;
     _return pushBack handgunWeapon player;
 } else {
-    _return pushBack [];
-    _return pushBack [];
+    _return pushBack "";
+    _return pushBack "";
 };
 
 _uItems = [];

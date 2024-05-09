@@ -88,6 +88,13 @@ class ProcessAction {
         //ScrollText = "Harvest Marijuana";
         NoLicenseCost = 500;
     };
+    class jet {
+        MaterialsReq[] = { {"brahminshit",1} };
+        MaterialsGive[] = { {"jet",1} };
+        Text = "STR_Process_Jet";
+        //ScrollText = "Harvest Marijuana";
+        NoLicenseCost = 100;
+    };
 
     class cement {
         MaterialsReq[] = {{"rock",1}};

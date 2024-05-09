@@ -18,20 +18,20 @@ class Life_Settings {
 /* Database Related Settings */
     /* Player Data Saving */
     save_virtualItems = true; //Save Virtual items (all sides)?
-    saved_virtualItems[] = { "pickaxe","fuelEmpty","fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat","defibrillator","toolkit" }; //Array of virtual items that can be saved on your player.
+    saved_virtualItems[] = { "stimpack", "ant_egg", "ant_meat", "barrel_cactus_fruit", "banana_yucca_fruit", "bighorner_meat", "bighorner_steak", "black_blood_sausage", "blamco_mac_cheese", "bloatfly_meat", "bloatfly_slider", "blood_sausage", "brahmin_meat", "brahmin_steak", "brahmin_wellington", "broc_flower", "bubblegum", "buffalo_gourd_seed", "caravan_lunch", "cave_fungus", "cazador_egg", "coyote_meat", "coyote_steak", "cram", "crispy_squirrel_bits", "crunchy_mutfruit", "dandy_boy_apples", "daturana", "desert_salad", "dog_meat", "dog_steak", "fancy_lads_snack_cakes", "fire_ant_egg", "fire_ant_meat", "fresh_apple", "fresh_carrot", "fresh_pear", "fresh_potato", "gecko_kebab", "gecko_meat", "gecko_steak", "giant_rat_meat", "grilled_mantis", "gum_drops", "honey_mesquite_pod", "human_flesh", "human_remains", "iguana_bits", "iguana_on_a_stick", "imitation_strange_meat_pie", "instamash", "junk_food", "lakelurk_egg", "lakelurk_meat", "maize", "mole_rat_meat", "mole_rat_stew", "mole_rat_wonder_meat", "mre", "mushroom_cloud", "mutant_cave_fungus", "mutfruit", "nevada_agave_fruit", "nightstalker_tail", "noodles", "pinto_bean_pod", "pinyon_nuts", "pork_n_beans", "potato_crisps", "preserved_meat", "pre_war_steak", "prickly_pear_fruit", "radroach_meat", "rat_meat", "rubys_casserole", "sacred_datura_root", "salient_green", "salisbury_steak", "spore_carrier_sap", "spore_plant_pods", "squirrel_on_a_stick", "squirrel_stew", "strange_meat", "strange_meat_pie", "sugar_bombs", "thick_red_paste", "thin_red_paste", "trail_mix", "wasteland_omelet", "white_horsenettle", "xander_root", "yao_guai_meat", "yumyum_deviled_eggs", "brahminshit", "jet", "cannabis", "marijuana", "pickaxe","fuelEmpty","fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat","defibrillator","toolkit" }; //Array of virtual items that can be saved on your player.
     save_playerStats = true; //Save food, water and damage (all sides)?
-    save_civilian_weapons = false; //Allow civilians to save weapons on them?
-    save_civilian_position = false; //Save civilian location?
-    save_civilian_position_restart = false; //Save civilian location only between restarts. After a server restart you'll have to spawn again.
+    save_civilian_weapons = true; //Allow civilians to save weapons on them?
+    save_civilian_position = true; //Save civilian location?
+    save_civilian_position_restart = true; //Save civilian location only between restarts. After a server restart you'll have to spawn again.
     /* !!!TO SAVE POSITION BETWEEN RESTARTS save_civilian_position MUST BE TRUE!!! */
     save_civilian_positionStrict = false; //Strip the player if possible combat-log?  WARNING: Server crashes and lack of reliable syncing can trigger this.
 
     /* Vehicle Data Saving */
-    save_vehicle_virtualItems = false; //Save virtual items inside the vehicle (all sides)(-- See defined items on next line --)
-    save_vehicle_items[] = { "pickaxe","fuelEmpty","fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat","defibrillator","toolkit" };
-    save_vehicle_inventory = false; //Save Arma inventory of vehicle to the database
-    save_vehicle_fuel = false; //Save vehicle fuel level to the database (Impounded/Garaged).
-    save_vehicle_damage = false; //Save vehicle damage to the database.
+    save_vehicle_virtualItems = true; //Save virtual items inside the vehicle (all sides)(-- See defined items on next line --)
+    save_vehicle_items[] = { "stimpack", "ant_egg", "ant_meat", "barrel_cactus_fruit", "banana_yucca_fruit", "bighorner_meat", "bighorner_steak", "black_blood_sausage", "blamco_mac_cheese", "bloatfly_meat", "bloatfly_slider", "blood_sausage", "brahmin_meat", "brahmin_steak", "brahmin_wellington", "broc_flower", "bubblegum", "buffalo_gourd_seed", "caravan_lunch", "cave_fungus", "cazador_egg", "coyote_meat", "coyote_steak", "cram", "crispy_squirrel_bits", "crunchy_mutfruit", "dandy_boy_apples", "daturana", "desert_salad", "dog_meat", "dog_steak", "fancy_lads_snack_cakes", "fire_ant_egg", "fire_ant_meat", "fresh_apple", "fresh_carrot", "fresh_pear", "fresh_potato", "gecko_kebab", "gecko_meat", "gecko_steak", "giant_rat_meat", "grilled_mantis", "gum_drops", "honey_mesquite_pod", "human_flesh", "human_remains", "iguana_bits", "iguana_on_a_stick", "imitation_strange_meat_pie", "instamash", "junk_food", "lakelurk_egg", "lakelurk_meat", "maize", "mole_rat_meat", "mole_rat_stew", "mole_rat_wonder_meat", "mre", "mushroom_cloud", "mutant_cave_fungus", "mutfruit", "nevada_agave_fruit", "nightstalker_tail", "noodles", "pinto_bean_pod", "pinyon_nuts", "pork_n_beans", "potato_crisps", "preserved_meat", "pre_war_steak", "prickly_pear_fruit", "radroach_meat", "rat_meat", "rubys_casserole", "sacred_datura_root", "salient_green", "salisbury_steak", "spore_carrier_sap", "spore_plant_pods", "squirrel_on_a_stick", "squirrel_stew", "strange_meat", "strange_meat_pie", "sugar_bombs", "thick_red_paste", "thin_red_paste", "trail_mix", "wasteland_omelet", "white_horsenettle", "xander_root", "yao_guai_meat", "yumyum_deviled_eggs", "brahminshit", "jet", "cannabis", "marijuana", "pickaxe","fuelEmpty","fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat","defibrillator","toolkit" };
+    save_vehicle_inventory = true; //Save Arma inventory of vehicle to the database
+    save_vehicle_fuel = true; //Save vehicle fuel level to the database (Impounded/Garaged).
+    save_vehicle_damage = true; //Save vehicle damage to the database.
     save_vehicle_illegal = false; //This will allow cops to be advised when a vehicle, with illegal items in it, is impounded. This will also save illegal items as proof of crime, and needs "save_vehicle_virtualItems" set as true. Illegal items don't need to be set in save_vehicle_items[] for being saved, if it's enabled.
 
 
@@ -42,7 +42,7 @@ class Life_Settings {
     minimum_cops = 5; //Minimum cops required online to rob the Federal Reserve
 
     /*Death settings*/
-    drop_weapons_onDeath = false; //Set true to enable weapon dropping on death. False (default) will delete player weapons on death, allowing them to be revived with them instead
+    drop_weapons_onDeath = true; //Set true to enable weapon dropping on death. False (default) will delete player weapons on death, allowing them to be revived with them instead
 
     /* Basic System Configurations */
     donor_level = false; //Enable the donor level set in database (var = life_donorlevel; levels = 0,1,2,3,4,5). ATTENTION! Before enabling, read: https://www.bistudio.com/community/game-content-usage-rules & https://www.bistudio.com/monetization
@@ -74,7 +74,7 @@ class Life_Settings {
     fuelCan_refuel = 250; //Cost to refuel an empty fuel canister at the fuel station pumps. (Be wary of your buy/sell prices on fuel cans to prevent exploits...)
 
     /* Gang System Configurations */
-    gang_price = 75000; //Gang creation price. --Remember they are persistent so keep it reasonable to avoid millions of gangs.
+    gang_price = 999999999; //Gang creation price. --Remember they are persistent so keep it reasonable to avoid millions of gangs.
     gang_upgradeBase = 10000; //The base cost for purchasing additional slots in a gang
     gang_upgradeMultiplier = 2.5; //CURRENTLY NOT IN USE
     gang_area[] = {"gang_area_1","gang_area_2","gang_area_3"}; //Variable of gang zone markers  
@@ -89,23 +89,23 @@ class Life_Settings {
     animaltypes_hunting[] = { "Sheep_random_F", "Goat_random_F", "Hen_random_F", "Cock_random_F", "Rabbit_F" }; //Classnames of aniamls you can hunt/gut
 
     /* Item-related Restrictions */
-    restrict_medic_weapons = true; //Set to false to allow medics to use any weapon --true will remove ANY weapon they attempt to use (primary,secondary,launcher)
-    restrict_clothingPickup = true; //Set to false to allow civilians to pickup/take any uniform (ground/crates/vehicles)
+    restrict_medic_weapons = false; //Set to false to allow medics to use any weapon --true will remove ANY weapon they attempt to use (primary,secondary,launcher)
+    restrict_clothingPickup = false; //Set to false to allow civilians to pickup/take any uniform (ground/crates/vehicles)
     restrict_weaponPickup = false; //Set to false to allow civilians to pickup/take any weapon (ground/crates/vehicles)
-    restricted_uniforms[] = { "U_Rangemaster", "U_B_CombatUniform_mcam_tshirt", "U_B_CombatUniform_mcam_worn", "U_B_survival_uniform" };
-    restricted_weapons[] = { "hgun_P07_snds_F", "arifle_MX_F", "arifle_MXC_F" };
+    restricted_uniforms[] = {};
+    restricted_weapons[] = {};
 
     /* Jail System Configurations */
     jail_seize_vItems[] = { "spikeStrip","lockpick","goldbar","blastingcharge","boltcutter","defusekit","heroin_unprocessed","heroin_processed","cannabis","marijuana","cocaine_unprocessed","cocaine_processed","turtle_raw" }; //Define VIRTUAL items you want to be removed from players upon jailing here. Use "jail_seize_inventory" for Arma inventory items.
     jail_seize_inventory = false; //Set to true to run the cop seize script on inmates. False will remove only weapons and magazines otherwise. (Basically used in case cops forget to seize items). [See Lines 127-131 below]
-    sendtoJail_locations[] = { "police_hq_1", "police_hq_2", "cop_spawn_3", "cop_spawn_5", "Correctional_Facility" }; //Enter the variableName from the mission.sqm here to allow cops to send a person to jail at these locations.
+    sendtoJail_locations[] = {"Correctional_Facility" }; //Enter the variableName from the mission.sqm here to allow cops to send a person to jail at these locations.
     jail_forceWalk = true;
-    jail_timeMultiplier = 15; //Put in minutes how long you want your victim in jail.
+    jail_timeMultiplier = 10; //Put in minutes how long you want your victim in jail.
 
     /* Medical System Configurations */
     revive_cops = true; //true to enable cops the ability to revive everyone or false for only medics/ems.
     revive_civ = false; //true to enable civs the ability to revive everyone or false for only medics/ems or medic/ems/cops.
-    revive_east = false; //true to enable opfor the ability to revive everyone or false for only medics/ems or medic/ems/cops.
+    revive_east = true; //true to enable opfor the ability to revive everyone or false for only medics/ems or medic/ems/cops.
     revive_fee = 1500; //Revive fee that players have to pay and medics only EMS(independent) are rewarded with this amount.
     hospital_heal_fee = 100; //Fee to heal at a hospital NPC
 
@@ -113,16 +113,34 @@ class Life_Settings {
     bank_cop = 7000; //Amount of cash in bank for new cops
     bank_civ = 3000; //Amount of cash in bank for new civillians
     bank_med = 6500; //Amount of cash in bank for new medics
+    bank_adac = 6500; //Amount of cash in bank for new ADAC
 
     paycheck_cop = 500; //Payment for cops
     paycheck_civ = 350; //Payment for civillians
     paycheck_med = 450; //Payment for medics
+    paycheck_adac = 450; //Payment for ADAC
 
     paycheck_period = 5; //Scaled in minutes
     bank_transferTax = .05; //Tax that player pays when transferring money from ATM. Tax = Amount * multiplier
 
+    /*
+        DP1 = Pawn_Shop
+        DP2 = The_Silver_Rush
+        DP3 = The_Atomic_Wrangler
+        DP4 = The_Kings
+        DP5 = The_Followers_of_the_Appocalypse
+        DP6 = Mick_and_Ralphs
+        DP7 = The_LVB_Station
+        DP8 = The_NCR_Jail
+        DP9 = Roys_Motel
+        DP10 = The_Tops
+        DP11 = The_Gomorrah
+        DP12 = The_Lucky_38
+        DP13 = The_Ultra_Luxe
+        DP14 = The_Vault_21_Hotel
+    */
     /* Player Job System Configurations */
-    delivery_points[] = { "dp_1", "dp_2", "dp_3", "dp_4", "dp_5", "dp_6", "dp_7", "dp_8", "dp_9", "dp_10", "dp_11", "dp_12", "dp_13", "dp_14", "dp_15", "dp_15", "dp_16", "dp_17", "dp_18", "dp_19", "dp_20", "dp_21", "dp_22", "dp_23", "dp_24", "dp_25" };
+    delivery_points[] = { "Pawn_Shop", "The_Silver_Rush", "The_Atomic_Wrangler", "The_Kings", "The_Followers_of_the_Apocalypse", "Mick_and_Ralphs", "The_LVB_Station", "The_NCR_Jail", "Roys_Motel", "The_Tops", "The_Gomorrah", "The_Lucky_38", "The_Ultra_Luxe", "The_Vault_21_Hotel" };
     fuelTank_winMultiplier = 1; //Win Multiplier in FuelTank Missions. Increase for greater payout. Default = 1
 
     /* Search & Seizure System Configurations */
@@ -142,19 +160,19 @@ class Life_Settings {
     vehicle_purchase_multiplier_CIVILIAN = 1; //Civilian Vehicle Buy Price = Config_Vehicle price * multiplier
     vehicle_purchase_multiplier_COP = .5; //Cop Vehicle Buy Price = Config_Vehicle price * multiplier
     vehicle_purchase_multiplier_MEDIC = .75; //Medic Vehicle Buy Price = Config_Vehicle price * multiplier
-    vehicle_purchase_multiplier_OPFOR = -1; // -- NOT IN USE -- Simply left in for east support.
+    vehicle_purchase_multiplier_OPFOR = .75; // -- NOT IN USE -- Simply left in for east support.
 
     /* Vehicle Rental Prices */
     vehicle_rental_multiplier_CIVILIAN = .80; //Civilian Vehicle Rental Price = Config_Vehicle price * multiplier
     vehicle_rental_multiplier_COP = .3; //Cop Vehicle Rental Price = Config_Vehicle price * multiplier
     vehicle_rental_multiplier_MEDIC = .55; //Medic Vehicle Rental Price = Config_Vehicle price * multiplier
-    vehicle_rental_multiplier_OPFOR = -1; // -- NOT IN USE -- Simply left in for east support.
+    vehicle_rental_multiplier_OPFOR = .55; // -- NOT IN USE -- Simply left in for east support.
 
     /* Vehicle Sell Prices */
     vehicle_sell_multiplier_CIVILIAN = .5; //Civilian Vehicle Garage Sell Price = Vehicle Buy Price * multiplier
     vehicle_sell_multiplier_COP = .5; //Cop Vehicle Garage Sell Price = Vehicle Buy Price * multiplier
     vehicle_sell_multiplier_MEDIC = .5; //Medic Vehicle Garage Sell Price = Vehicle Buy Price * multiplier
-    vehicle_sell_multiplier_OPFOR = -1; // -- NOT IN USE -- Simply left in for east support.
+    vehicle_sell_multiplier_OPFOR = .5; // -- NOT IN USE -- Simply left in for east support.
 
     /* "Other" Vehicle Prices */
     vehicle_chopShop_multiplier = .25; //Chop Shop price for vehicles. TO AVOID EXPLOITS NEVER SET HIGHER THAN A PURCHASE/RENTAL multipler!   Payout = Config_vehicle Price * multiplier
