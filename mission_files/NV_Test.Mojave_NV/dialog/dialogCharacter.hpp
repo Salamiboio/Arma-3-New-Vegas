@@ -1642,7 +1642,7 @@ class playerCreation {
 		GNTEXT,
 		CRTEXT,
 		CRTEXT2,
-		SATEXT,
+		NPTEXT,
 		SKTEXT,
 		GITEXT,
 		FMSEL,
@@ -1658,7 +1658,7 @@ class playerCreation {
 		GNSEL,
 		CRSEL,
 		CRSEL2,
-		SASEL,
+		NPSEL,
 		SKSEL,
 		GISEL,
 		TRAITS,
@@ -1675,7 +1675,7 @@ class playerCreation {
 		GNTRAIT,
 		CRTRAIT,
 		CRTRAIT2,
-		SATRAIT,
+		NPTRAIT,
 		SKTRAIT,
 		GITRAIT,
 		SGTEXT,
@@ -1926,12 +1926,13 @@ class playerCreation {
 	class STTEXT : RscStructuredText
 	{
 		idc = 1000;
-		sizeEx = 1;
+		
 		text = "<t size='1.3' color='#38d408' align='left'  shadow='0'>0 5</t>"; //--- ToDo: Localize;
 		x = 0.213828 * safezoneW + safezoneX;
 		y = 0.289194 * safezoneH + safezoneY;
 		w = 0.023229 * safezoneW;
 		h = 0.0265186 * safezoneH;
+		sizeEx = 1 * GUI_GRID_H;
 		colorBackground[] = { 0,0,0,0 };
 		colorActive[] = { 0,0,0,0 };
 
@@ -1939,7 +1940,7 @@ class playerCreation {
 	class PETEXT : RscStructuredText
 	{
 		idc = 1001;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t size='1.3' color='#38d408' align='left'  shadow='0'>0 5</t>"; //--- ToDo: Localize;
 		x = 0.213828 * safezoneW + safezoneX;
 		y = 0.324394 * safezoneH + safezoneY;
@@ -1953,7 +1954,7 @@ class playerCreation {
 	class ENTEXT : RscStructuredText
 	{
 		idc = 1002;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t size='1.3' color='#38d408' align='left'  shadow='0'>0 5</t>"; //--- ToDo: Localize;
 		x = 0.213828 * safezoneW + safezoneX;
 		y = 0.358668 * safezoneH + safezoneY;
@@ -1967,7 +1968,7 @@ class playerCreation {
 	class CHTEXT : RscStructuredText
 	{
 		idc = 1003;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t size='1.3' color='#38d408' align='left'  shadow='0'>0 5</t>"; //--- ToDo: Localize;
 		x = 0.213828 * safezoneW + safezoneX;
 		y = 0.39352 * safezoneH + safezoneY;
@@ -1981,7 +1982,7 @@ class playerCreation {
 	class INTEXT : RscStructuredText
 	{
 		idc = 1004;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t size='1.3' color='#38d408' align='left'  shadow='0'>0 5</t>"; //--- ToDo: Localize;
 		x = 0.213828 * safezoneW + safezoneX;
 		y = 0.429068 * safezoneH + safezoneY;
@@ -1995,7 +1996,7 @@ class playerCreation {
 	class AGTEXT : RscStructuredText
 	{
 		idc = 1005;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t size='1.3' color='#38d408' align='left'  shadow='0'>0 5</t>"; //--- ToDo: Localize;
 		x = 0.213828 * safezoneW + safezoneX;
 		y = 0.464268 * safezoneH + safezoneY;
@@ -2009,7 +2010,7 @@ class playerCreation {
 	class LKTEXT : RscStructuredText
 	{
 		idc = 1006;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t size='1.3' color='#38d408' align='left'  shadow='0'>0 5</t>"; //--- ToDo: Localize;
 		x = 0.213828 * safezoneW + safezoneX;
 		y = 0.498194 * safezoneH + safezoneY;
@@ -2023,7 +2024,7 @@ class playerCreation {
 	class STDESC : RscStructuredText
 	{
 		idc = 1100;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t color='#38d408' align='left' 'shadow='0'>Avrg</t>"; //--- ToDo: Localize;
 		x = 0.242032 * safezoneW + safezoneX;
 		y = 0.291926 * safezoneH + safezoneY;
@@ -2035,7 +2036,7 @@ class playerCreation {
 	class PEDESC : RscStructuredText
 	{
 		idc = 1101;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t color='#38d408' align='left' 'shadow='0'>Avrg</t>"; //--- ToDo: Localize;
 		x = 0.242708 * safezoneW + safezoneX;
 		y = 0.326852 * safezoneH + safezoneY;
@@ -2048,7 +2049,7 @@ class playerCreation {
 	class ENDESC : RscStructuredText
 	{
 		idc = 1102;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t color='#38d408' align='left' 'shadow='0'>Avrg</t>"; //--- ToDo: Localize;
 		x = 0.242032 * safezoneW + safezoneX;
 		y = 0.361778 * safezoneH + safezoneY;
@@ -2061,7 +2062,7 @@ class playerCreation {
 	class CHDESC : RscStructuredText
 	{
 		idc = 1103;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t color='#38d408' align='left' 'shadow='0'>Avrg</t>"; //--- ToDo: Localize;
 		x = 0.242032 * safezoneW + safezoneX;
 		y = 0.395778 * safezoneH + safezoneY;
@@ -2074,7 +2075,7 @@ class playerCreation {
 	class INDESC : RscStructuredText
 	{
 		idc = 1104;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t color='#38d408' align='left' 'shadow='0'>Avrg</t>"; //--- ToDo: Localize;
 		x = 0.242032 * safezoneW + safezoneX;
 		y = 0.430704 * safezoneH + safezoneY;
@@ -2087,7 +2088,7 @@ class playerCreation {
 	class AGDESC : RscStructuredText
 	{
 		idc = 1105;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t color='#38d408' align='left' 'shadow='0'>Avrg</t>"; //--- ToDo: Localize;
 		x = 0.242032 * safezoneW + safezoneX;
 		y = 0.46563 * safezoneH + safezoneY;
@@ -2100,7 +2101,7 @@ class playerCreation {
 	class LKDESC : RscStructuredText
 	{
 		idc = 1106;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t color='#38d408' align='left' 'shadow='0'>Avrg</t>"; //--- ToDo: Localize;
 		x = 0.242032 * safezoneW + safezoneX;
 		y = 0.500556 * safezoneH + safezoneY;
@@ -2113,7 +2114,7 @@ class playerCreation {
 	class CHARPOINTS : RscStructuredText
 	{
 		idc = 1007;
-		sizeEx = 1;
+		sizeEx = 1 * GUI_GRID_H;
 		text = "<t size='1.3' color='#38d408' align='left'  shadow='0'>0 5</t>"; //--- ToDo: Localize;
 		x = 0.2625 * safezoneW + safezoneX;
 		y = 0.548148 * safezoneH + safezoneY;
@@ -2302,11 +2303,11 @@ class playerCreation {
 		colorActive[] = { 0,0,0,0 };
 
 	};
-	class SATEXT : RscStructuredText
+	class NPTEXT : RscStructuredText
 	{
 		idc = 1120;
 
-		text = "<t size='0.8' color='#38d408' align='left' 'shadow='0'>Sex Appeal</t>"; //--- ToDo: Localize;
+		text = "<t size='0.8' color='#38d408' align='left' 'shadow='0'>Night Person</t>"; //--- ToDo: Localize;
 		x = 0.332789 * safezoneW + safezoneX;
 		y = 0.687284 * safezoneH + safezoneY;
 		w = 0.0515765 * safezoneW;
@@ -2362,7 +2363,7 @@ class playerCreation {
 	class SFSEL : RscButton
 	{
 		idc = 1617;
-		action = "playSound 'pipboyClick';[1109, 1011] call sal_fnc_selectTrait";
+		action = "playSound 'pipboyClick';[] call sal_fnc_smallFrame";
 		x = 0.189219 * safezoneW + safezoneX;
 		y = 0.6513 * safezoneH + safezoneY;
 		w = 0.0103153 * safezoneW;
@@ -2380,7 +2381,7 @@ class playerCreation {
 	class FISEL : RscButton
 	{
 		idc = 1619;
-		action = "playSound 'pipboyClick';[1111, 1013] call sal_fnc_selectTrait";
+		action = "playSound 'pipboyClick';[] call sal_fnc_finesse";
 		x = 0.189218 * safezoneW + safezoneX;
 		y = 0.678136 * safezoneH + safezoneY;
 		w = 0.0103153 * safezoneW;
@@ -2389,7 +2390,7 @@ class playerCreation {
 	class KASEL : RscButton
 	{
 		idc = 1620;
-		action = "playSound 'pipboyClick';[1112, 1014] call sal_fnc_selectTrait";
+		action = "playSound 'pipboyClick';[] call sal_fnc_kamikaze";
 		x = 0.189743 * safezoneW + safezoneX;
 		y = 0.691092 * safezoneH + safezoneY;
 		w = 0.0103153 * safezoneW;
@@ -2434,7 +2435,7 @@ class playerCreation {
 	class GNSEL : RscButton
 	{
 		idc = 1625;
-		action = "playSound 'pipboyClick';[1117, 1019] call sal_fnc_selectTrait";
+		action = "playSound 'pipboyClick';[] call sal_fnc_goodNatured";
 		x = 0.388538 * safezoneW + safezoneX;
 		y = 0.6513 * safezoneH + safezoneY;
 		w = 0.0103153 * safezoneW;
@@ -2458,7 +2459,7 @@ class playerCreation {
 		w = 0.0103153 * safezoneW;
 		h = 0.0110037 * safezoneH;
 	};
-	class SASEL : RscButton
+	class NPSEL : RscButton
 	{
 		idc = 1628;
 		action = "playSound 'pipboyClick';[1120, 1022] call sal_fnc_selectTrait";
@@ -2470,7 +2471,7 @@ class playerCreation {
 	class SKSEL : RscButton
 	{
 		idc = 1629;
-		action = "playSound 'pipboyClick';[1121, 1023] call sal_fnc_selectTrait";
+		action = "playSound 'pipboyClick';[] call sal_fnc_skilledSelected";
 		x = 0.389063 * safezoneW + safezoneX;
 		y = 0.705898 * safezoneH + safezoneY;
 		w = 0.0103153 * safezoneW;
@@ -2479,7 +2480,7 @@ class playerCreation {
 	class GISEL : RscButton
 	{
 		idc = 1630;
-		action = "playSound 'pipboyClick';[1122, 1024] call sal_fnc_selectTrait";
+		action = "playSound 'pipboyClick';[] call sal_fnc_giftedSelected";
 		x = 0.389063 * safezoneW + safezoneX;
 		y = 0.719779 * safezoneH + safezoneY;
 		w = 0.0103153 * safezoneW;
@@ -2625,7 +2626,7 @@ class playerCreation {
 		h = 0.0220075 * safezoneH;
 		colorText[] = { 0,0,0,0 };
 	};
-	class SATRAIT : RscText
+	class NPTRAIT : RscText
 	{
 		idc = 1022;
 		text = "0"; //--- ToDo: Localize;
@@ -3577,7 +3578,7 @@ class playerCreation {
 	{
 		idc = 1173;
 
-		text = "<t size='1' color='#38d408' align='left 'shadow='0'>40</t>"; //--- ToDo: Localize;
+		text = "<t size='1' color='#38d408' align='left 'shadow='0'>0</t>"; //--- ToDo: Localize;
 		x = 0.370848 * safezoneW + safezoneX;
 		y = 0.434013 * safezoneH + safezoneY;
 		w = 0.0258304 * safezoneW;
@@ -3587,7 +3588,7 @@ class playerCreation {
 	{
 		idc = 1174;
 
-		text = "<t size='1' color='#38d408' align='left 'shadow='0'>40</t>"; //--- ToDo: Localize;
+		text = "<t size='1' color='#38d408' align='left 'shadow='0'>50</t>"; //--- ToDo: Localize;
 		x = 0.370848 * safezoneW + safezoneX;
 		y = 0.456008 * safezoneH + safezoneY;
 		w = 0.0258304 * safezoneW;

@@ -766,7 +766,7 @@ switch (_item) do {
      };
     case "absinthe": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, -20, 0, 0, +1, 0, +1, -1, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
@@ -787,7 +787,7 @@ switch (_item) do {
 
     case "beer": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
@@ -822,7 +822,7 @@ switch (_item) do {
 
     case "dixons_whiskey": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, -25, 0, +1, 0, 0, 0, -2, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
@@ -836,14 +836,14 @@ switch (_item) do {
 
     case "irradiated_beer": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
 
     case "irradiated_scotch": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, -25, 0, +1, 0, 0, +1, -1, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
@@ -864,14 +864,14 @@ switch (_item) do {
 
     case "irradiated_whiskey": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, -25, 0, +1, 0, 0, +1, -1, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
 
     case "jake_juice": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, -25, 0, +1, 0, 0, +1, -1, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
@@ -885,7 +885,7 @@ switch (_item) do {
 
     case "moonshine": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, -25, 0, +2, 0, 0, +2, -2, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
@@ -941,14 +941,14 @@ switch (_item) do {
 
     case "scotch": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, -25, 0, +1, 0, 0, +1, -1, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
 
     case "sierra_madre_martini": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, +75 , "drink1", 0, 0, 0, +2, 0, +4, 0, 0, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
@@ -962,8 +962,8 @@ switch (_item) do {
 
     case "vodka": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, -25, 0, +1, 0, 0, +1, -1, 0, 0, 120] spawn sal_fnc_useitem;
-             closedialog 0;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
+            closedialog 0;
          };
      };
 
@@ -976,18 +976,18 @@ switch (_item) do {
 
     case "whiskey": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, -25, 0, +1, 0, 0, +1, -1, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
 
     case "wine": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, -15, 0, +1, 0, 0, +1, -1, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, -20, 0, +1, 0, 0, +1, -1, 0, 0, 120, "Alcohol"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
-         case "ant_queen_pheromones": {
+    case "ant_queen_pheromones": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
             [+0, 0, "chewy1", 0, 0, 0, 0, -3, 0, +3, -3, 0, 0, 120] spawn sal_fnc_useitem;
              closedialog 0;
@@ -1003,7 +1003,7 @@ switch (_item) do {
 
     case "ant_nectar": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "chewy1", 0, 0, 0, +2, 0, 0, -2, -2, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "chewy1", 0, 0, 0, +2, 0, 0, -2, -2, 0, 0, 120, "Ant"] spawn sal_fnc_usedrug;
              closedialog 0;
          };
      };
@@ -1031,7 +1031,7 @@ switch (_item) do {
 
     case "buffout": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "radx", 0, 0, 0, +2, 0, +3, 0, 0, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "radx", 0, 0, 0, +2, 0, +3, 0, 0, 0, 0, 120, "Buffout"] spawn sal_fnc_usedrug;
              closedialog 0;
          };
      };
@@ -1045,7 +1045,7 @@ switch (_item) do {
 
     case "coyote_tobacco_chew": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "chewy1", 0, 0, 0, 0, +1, 0, 0, 0, +1, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "chewy1", 0, 0, 0, 0, +1, 0, 0, 0, +1, 0, 120,"Tobacco"] spawn sal_fnc_usedrug;
              closedialog 0;
          };
      };
@@ -1066,7 +1066,7 @@ switch (_item) do {
 
     case "dixons_jet": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "jet", 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "jet", 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 120, "Jet"] spawn sal_fnc_usedrug;
              closedialog 0;
          };
      };
@@ -1087,7 +1087,7 @@ switch (_item) do {
 
     case "fire_ant_nectar": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "chewy1", 0, 0, 0, 0, 0, 0, 0, -3, +4, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "chewy1", 0, 0, 0, +2, 0, 0, -2, -2, 0, 0, 120, "Ant"] spawn sal_fnc_usedrug;
              closedialog 0;
          };
      };
@@ -1122,14 +1122,14 @@ switch (_item) do {
 
     case "hydra": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, 0, 0, 0, 0, -3, 0, 0, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, 0, 0, 0, 0, -3, 0, 0, 0, 0, 120, "Hydra"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
 
     case "jet": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "jet", 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "jet", 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 120, "Jet"] spawn sal_fnc_useDrug;
             [["focus_trip"] , 2, true] spawn asn_fnc_usedrug;
              closedialog 0;
          };
@@ -1137,7 +1137,7 @@ switch (_item) do {
 
     case "med_x": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "stimpack", 0, 0, 0, 0, 0, 0, 0, -1, -1, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "stimpack", 0, 0, 0, 0, 0, 0, 0, -1, -1, 0, 120, "Medx"] spawn sal_fnc_usedrug;
              closedialog 0;
          };
      };
@@ -1151,21 +1151,21 @@ switch (_item) do {
 
     case "mentats": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "mentats", 0, 0, 0, 0, +2, 0, +1, +2, -1, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "mentats", 0, 0, 0, 0, +2, 0, +1, +2, -1, 0, 120, "Mentats"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
 
     case "party_time_mentats": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "mentats", 0, 0, 0, 0, +2, 0, +5, +2, -1, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "mentats", 0, 0, 0, 0, +2, 0, +5, +2, -1, 0, 120, "Mentats"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
 
     case "psycho": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "psycho", 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "psycho", 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 120, "Psycho"] spawn sal_fnc_usedrug;
              closedialog 0;
          };
      };
@@ -1186,14 +1186,14 @@ switch (_item) do {
 
     case "rebound": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "stimpack", 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "jet", 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 120, "Jet"] spawn sal_fnc_usedrug;
              closedialog 0;
          };
      };
 
     case "rocket": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "jet", 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "jet", 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 120, "Jet"] spawn sal_fnc_usedrug;
              closedialog 0;
          };
      };
@@ -1207,14 +1207,14 @@ switch (_item) do {
 
     case "slasher": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "stimpack", 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "psycho", 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 120, "Psycho"] spawn sal_fnc_usedrug;
              closedialog 0;
          };
      };
 
     case "steady": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "drink1", 0, 0, 0, -1, 0, 0, 0, 0, -1, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "drink1", 0, 0, 0, -1, 0, 0, 0, 0, -1, 0, 120, "Steady"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
@@ -1235,14 +1235,14 @@ switch (_item) do {
 
     case "turbo": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "jet", 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "jet", 0, 0, 0, 0, 0, 0, 0, 0, -2, 0, 120, "Turbo"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
 
     case "ultrajet": {
         if ([false, _item, 1] call life_fnc_handleInv) then {
-            [+0, 0, "jet", 0, 0, 0, -2, -1, 0, 0, 0, -2, 0, 120] spawn sal_fnc_useitem;
+            [+0, 0, "jet", 0, 0, 0, -2, -1, 0, 0, 0, -2, 0, 120, "Ultrajet"] spawn sal_fnc_useDrug;
              closedialog 0;
          };
      };
